@@ -1,0 +1,16 @@
+<?php
+  if( in_array( "Bussiness", get_field( 'memberzhip' ) ) ) {
+?>
+    <a href="#" class="more icon--chev">View full article</a>
+<? } else { ?>
+    <a href="home.php">Home</a>
+<?php } ?>
+
+== ATAU == 
+
+
+<?php if ( get_field( 'content' ) == 'high_life' ): ?>
+<?php echo do_shortcode('[pms-restrict subscription_plans="1472,1473"]'.do_shortcode('[price_info-shortcode]').'[/pms-restrict]'); ?>
+<?php else: ?>
+<?php echo do_shortcode('[price_info-shortcode]');?>
+<?php endif; ?>
