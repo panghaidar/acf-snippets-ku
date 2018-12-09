@@ -1,0 +1,12 @@
+<?php
+  if( in_array( "Bussiness", get_field( 'memberzhip' ) ) ) {
+?>
+<?php echo do_shortcode('[pms-restrict subscription_plans="1472"]'.do_shortcode('[price_info-shortcode]').'[/pms-restrict]'); ?>
+
+<? } elseif( in_array( "HighLife", get_field( 'memberzhip' ) ) ) {
+?>
+<p>High Life Check</p>
+
+<? } else { ?>
+<?php echo do_shortcode('[pms-restrict subscription_plans="1471"]'.do_shortcode('[price_info-shortcode]').'[/pms-restrict]'); ?>
+<?php } ?>
